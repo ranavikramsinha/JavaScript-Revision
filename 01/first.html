@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Aryan Sinha")
+
+        const clickMe = () => (console.log("Button Clicked"))
+
+        const changeParagraphText = () => (document.getElementById("my_para").innerHTML = "New Paragraph")
+
+        const styleMe = () => (document.getElementById("my_para").style.color = "yellow")
+    </script>
+</head>
+<body style="background-color: #222222; color: #ffffff;">
+    <h1>Rana Vikram Sinha</h1>
+    <p id="my_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsam ab reiciendis vel nobis eius aspernatur provident, repudiandae ratione harum.</p>
+    <button onclick="clickMe()">Click Me</button>
+    <button onclick="changeParagraphText()">Change Paragraph Text</button>
+    <button onclick="styleMe()">Change paragraph color</button>
+</body>
+</html>
