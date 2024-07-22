@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 1</title>
+    <style>
+      .my_button {
+        background-color: yellow;
+      }
+
+      #add_to_bag{
+        background-color: greenyellow;
+        border-radius: 7px;
+        padding: 3px 10px;
+        border: none;
+      }
+
+      #wishlist{
+        text-transform: uppercase;
+        padding: 3px 20px;
+        border: 3px solid crimson;
+        border-radius: 7px;
+      }
+    </style>
+
+    <script>
+        alert("Practice 1")
+
+        const addToBag = () => (alert("Added to Bag"))
+
+        const whislist = () => (alert("Added to Wishlist"))
+    </script>
+  </head>
+  <body style="background-color: #222222; color: #ffffff">
+    <main>
+      <button>Click</button>
+      <button id="first_button" class="my_button">First</button>
+      <button id="second_button" class="my_button">Second</button>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+        dolore, dolorem ipsam et commodi placeat sit esse aliquid? Architecto
+        maiores nemo, suscipit voluptatem quis hic, eveniet laudantium sed
+        sapiente aspernatur nobis iste veniam facere officiis accusamus libero
+        voluptatibus beatae? Aliquid beatae repellat tenetur quam accusamus
+        cumque totam ipsa explicabo dolorem.
+      </p>
+      <button id="add_to_bag" onclick="addToBag()">Add to Bag</button>
+      <button id="wishlist" onclick="whislist()">💖Wishlist</button>
+    </main>
+  </body>
+</html>
