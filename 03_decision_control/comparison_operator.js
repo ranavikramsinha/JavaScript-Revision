@@ -16,7 +16,7 @@ console.log(1 != '1'); //* false
 let age = 23;
 
 console.log(age > 18); //* true
-console.log(age < 18);
+console.log(age < 18); //* false
 
 console.log(age >= 18); //* true
 console.log(age <= 18); //* false
