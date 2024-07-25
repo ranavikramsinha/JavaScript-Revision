@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style/rock_paper_scissor.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <p>Click one of the following to play the game</p>
+    <button
+      class="choice_button"
+      onclick="
+    document.querySelector('#result').innerHTML = 'You Chose 👊 Rock'"
+    >
+      👊 Rock
+    </button>
+    <button
+      class="choice_button"
+      onclick="
+    document.querySelector('#result').innerHTML = 'You Chose ✋ Paper'"
+    >
+      ✋ Paper
+    </button>
+    <button
+      class="choice_button"
+      onclick="
+    document.querySelector('#result').innerHTML = 'You Chose ✌️ Scissors'"
+    >
+      ✌️ Scissors
+    </button>
+    <h4 id="result"></h4>
+  </body>
+</html>
