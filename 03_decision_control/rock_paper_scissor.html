@@ -12,21 +12,60 @@
     <button
       class="choice_button"
       onclick="
-    document.querySelector('#result').innerHTML = 'You Chose 👊 Rock'"
+      let computerChoice = Math.floor(Math.random() * 3);
+      let computerChoiceText;
+
+      if(computerChoice === 0){
+        computerChoiceText = `👊 Rock`;
+      }
+      else if(computerChoice === 1){
+        computerChoiceText = `✋ Paper`;
+      }
+      else if(computerChoice === 2){
+        computerChoiceText = `✌️ Scissors`;
+      }
+
+      document.querySelector('#result').innerHTML = `You Chose 👊 Rock.</br>Computer Chose ${computerChoiceText}`"
     >
       👊 Rock
     </button>
     <button
       class="choice_button"
       onclick="
-    document.querySelector('#result').innerHTML = 'You Chose ✋ Paper'"
+      let computerChoicee = Math.floor(Math.random() * 3);
+      let computerChoiceeText;
+
+      if(computerChoicee === 0){
+        computerChoiceeText = `👊 Rock`;
+      }
+      else if(computerChoicee === 1){
+        computerChoiceeText = `✋ Paper`;
+      }
+      else if(computerChoicee === 2){
+        computerChoiceeText = `✌️ Scissors`;
+      }
+
+      document.querySelector('#result').innerHTML = `You Chose ✋ Paper.</br>Computer Chose ${computerChoiceeText}`"
     >
       ✋ Paper
     </button>
     <button
       class="choice_button"
       onclick="
-    document.querySelector('#result').innerHTML = 'You Chose ✌️ Scissors'"
+      let computerChoiceee = Math.floor(Math.random() * 3);
+      let computerChoiceeeText;
+
+      if(computerChoiceee === 0){
+        computerChoiceeeText = `👊 Rock`;
+      }
+      else if(computerChoiceee === 1){
+        computerChoiceeeText = `✋ Paper`;
+      }
+      else if(computerChoiceee === 2){
+        computerChoiceeeText = `✌️ Scissors`;
+      }
+
+      document.querySelector('#result').innerHTML = `You Chose ✌️ Scissors.</br>Computer Chose ${computerChoiceeeText}`"
     >
       ✌️ Scissors
     </button>
