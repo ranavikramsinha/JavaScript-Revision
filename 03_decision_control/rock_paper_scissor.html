@@ -25,7 +25,19 @@
         computerChoiceText = `✌️ Scissors`;
       }
 
-      document.querySelector('#result').innerHTML = `You Chose 👊 Rock.</br>Computer Chose ${computerChoiceText}`"
+      let result1;
+      
+      if(computerChoiceText === `👊 Rock`){
+        result1 = 'Tie';
+      }
+      else if(computerChoiceText === `✋ Paper`){
+        result1 = 'Computer Won'
+      }
+      else if(computerChoiceText === `✌️ Scissors`){
+        result1 = 'User Won'
+      }
+
+      document.querySelector('#result').innerHTML = `You Chose 👊 Rock.</br>Computer Chose ${computerChoiceText}<br>The Result is: ${result1}`"
     >
       👊 Rock
     </button>
@@ -45,7 +57,19 @@
         computerChoiceeText = `✌️ Scissors`;
       }
 
-      document.querySelector('#result').innerHTML = `You Chose ✋ Paper.</br>Computer Chose ${computerChoiceeText}`"
+      let result2;
+      
+      if(computerChoiceeText === `✋ Paper`){
+        result2 = 'Tie';
+      }
+      else if(computerChoiceeText === `👊 Rock`){
+        result2 = 'Computer Won'
+      }
+      else if(computerChoiceeText === `✌️ Scissors`){
+        result2 = 'User Won'
+      }
+
+      document.querySelector('#result').innerHTML = `You Chose ✋ Paper.</br>Computer Chose ${computerChoiceeText}<br>The Result is: ${result2}`"
     >
       ✋ Paper
     </button>
@@ -65,7 +89,19 @@
         computerChoiceeeText = `✌️ Scissors`;
       }
 
-      document.querySelector('#result').innerHTML = `You Chose ✌️ Scissors.</br>Computer Chose ${computerChoiceeeText}`"
+      let result3;
+      
+      if(computerChoiceeeText === `✌️ Scissors`){
+        result3 = 'Tie';
+      }
+      else if(computerChoiceeeText === `👊 Rock`){
+        result3 = 'Computer Won'
+      }
+      else if(computerChoiceeeText === `✋ Paper`){
+        result3 = 'User Won'
+      }
+
+      document.querySelector('#result').innerHTML = `You Chose ✌️ Scissors.</br>Computer Chose ${computerChoiceeeText}<br>The Result is: ${result3}`"
     >
       ✌️ Scissors
     </button>
