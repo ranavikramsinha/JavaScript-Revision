@@ -5,103 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style/rock_paper_scissor.css" />
+    <script src="rock_paper_scissor.js"></script>
   </head>
   <body>
     <h1>Rock Paper Scissors</h1>
     <p>Click one of the following to play the game</p>
     <button
       class="choice_button"
-      onclick="
-      let computerChoice = Math.floor(Math.random() * 3);
-      let computerChoiceText;
-
-      if(computerChoice === 0){
-        computerChoiceText = `👊 Rock`;
-      }
-      else if(computerChoice === 1){
-        computerChoiceText = `✋ Paper`;
-      }
-      else if(computerChoice === 2){
-        computerChoiceText = `✌️ Scissors`;
-      }
-
-      let result1;
-      
-      if(computerChoiceText === `👊 Rock`){
-        result1 = 'Tie';
-      }
-      else if(computerChoiceText === `✋ Paper`){
-        result1 = 'Computer Won'
-      }
-      else if(computerChoiceText === `✌️ Scissors`){
-        result1 = 'User Won'
-      }
-
-      document.querySelector('#result').innerHTML = `You Chose 👊 Rock.</br>Computer Chose ${computerChoiceText}<br>The Result is: ${result1}`"
+      onclick="rock()"
     >
       👊 Rock
     </button>
     <button
       class="choice_button"
-      onclick="
-      let computerChoicee = Math.floor(Math.random() * 3);
-      let computerChoiceeText;
-
-      if(computerChoicee === 0){
-        computerChoiceeText = `👊 Rock`;
-      }
-      else if(computerChoicee === 1){
-        computerChoiceeText = `✋ Paper`;
-      }
-      else if(computerChoicee === 2){
-        computerChoiceeText = `✌️ Scissors`;
-      }
-
-      let result2;
-      
-      if(computerChoiceeText === `✋ Paper`){
-        result2 = 'Tie';
-      }
-      else if(computerChoiceeText === `👊 Rock`){
-        result2 = 'Computer Won'
-      }
-      else if(computerChoiceeText === `✌️ Scissors`){
-        result2 = 'User Won'
-      }
-
-      document.querySelector('#result').innerHTML = `You Chose ✋ Paper.</br>Computer Chose ${computerChoiceeText}<br>The Result is: ${result2}`"
+      onclick="paper()"
     >
       ✋ Paper
     </button>
     <button
       class="choice_button"
-      onclick="
-      let computerChoiceee = Math.floor(Math.random() * 3);
-      let computerChoiceeeText;
-
-      if(computerChoiceee === 0){
-        computerChoiceeeText = `👊 Rock`;
-      }
-      else if(computerChoiceee === 1){
-        computerChoiceeeText = `✋ Paper`;
-      }
-      else if(computerChoiceee === 2){
-        computerChoiceeeText = `✌️ Scissors`;
-      }
-
-      let result3;
-      
-      if(computerChoiceeeText === `✌️ Scissors`){
-        result3 = 'Tie';
-      }
-      else if(computerChoiceeeText === `👊 Rock`){
-        result3 = 'Computer Won'
-      }
-      else if(computerChoiceeeText === `✋ Paper`){
-        result3 = 'User Won'
-      }
-
-      document.querySelector('#result').innerHTML = `You Chose ✌️ Scissors.</br>Computer Chose ${computerChoiceeeText}<br>The Result is: ${result3}`"
+      onclick="scissors()"
     >
       ✌️ Scissors
     </button>
