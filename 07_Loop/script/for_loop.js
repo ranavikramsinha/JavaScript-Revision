@@ -49,3 +49,19 @@ function primeNumber(num){
 }
 
 console.log(primeNumber(53));
+
+for(let i = 0; ; i++){
+    if(i === 5){
+        break;
+    }
+
+    console.log(i);
+}
+
+for(let i = 0; i < 21; i++){
+    if(i%2 === 0 || i%5 === 0){
+        continue;
+    }
+
+    console.log(i);
+}
