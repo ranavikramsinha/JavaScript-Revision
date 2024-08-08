@@ -2,6 +2,9 @@ let score = {
   computer: 0,
   user: 0,
   tie: 0,
+  updateScore: function(){
+    document.querySelector('#score').innerHTML = `Score: Computer Won: ${this.computer}, User Won: ${this.user} & Tie: ${this.tie}`
+  },
 }
 
 let computerChoice;
@@ -45,8 +48,6 @@ function scissors(){
 }
 
 function updateResult(userChoice, computerChoiceText, result){
-  document.querySelector('#score').innerHTML = `Score: Computer Won: ${score.computer}, User Won: ${score.user} & Tie: ${score.tie}`
-
   document.querySelector('#result').innerHTML = `You Chose ${userChoice}.</br>Computer Chose ${computerChoiceText}<br>The Result is: ${result}`
 
   // alert(`You Chose ${userChoice}.</br>Computer Chose ${computerChoiceText}<br>The Result is: ${result}`)
@@ -70,5 +71,6 @@ function computeResult(userChoice, computerChoiceText){
       score.user++;
     }
 
+    score.updateScore();
     return result;
 }
