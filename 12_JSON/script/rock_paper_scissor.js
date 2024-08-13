@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function reset() {
+    score.computer = 0;
+    score.user = 0;
+    score.tie = 0;
+    score.updateScore();
+  }
+
   function assignRandomChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
     return computerChoice;
@@ -105,4 +112,5 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#rockBtn").addEventListener("click", rock);
   document.querySelector("#paperBtn").addEventListener("click", paper);
   document.querySelector("#scissorsBtn").addEventListener("click", scissors);
+  document.querySelector("#resetBtn").addEventListener("click", reset);
 });
