@@ -61,25 +61,68 @@ finally{ //* finally always runs
 }
 
 //* Error handling (extending errors)
+// class ValidationError extends Error {
+//     constructor(message){
+//         super(message);
+//         this.name = 'ValidationError';
+//     }
+// }
+
+// function validate(input){
+//     if(!input){
+//         throw new ValidationError('Input is required.');
+//     }
+//     console.log(input);
+// }
+
+// try{
+//     validate('');
+// }
+// catch(error){
+//     if(error instanceof ValidationError){
+//         console.error('Validation Error:', error.message);
+//     }
+// }
+
 class ValidationError extends Error {
-    constructor(message){
+    constructor(message) {
         super(message);
         this.name = 'ValidationError';
+
+        //* Ensure the stack trace is captured in non-production environments.
+        if (Error.captureStackTrace) {
+            Error.captureStackTrace(this, this.constructor);
+        }
     }
 }
 
-function validate(input){
-    if(!input){
-        throw new ValidationError('Input is required.');
+function validate(input) {
+    if (input === undefined || input === null) {
+        throw new ValidationError('Input cannot be null or undefined.');
     }
-    console.log(input);
+    
+    if (typeof input !== 'string') {
+        throw new ValidationError('Input must be a string.');
+    }
+
+    if (input.trim() === '') {
+        throw new ValidationError('Input cannot be an empty string.');
+    }
+    
+    console.log('Valid input:', input);
 }
 
-try{
-    validate('');
-}
-catch(error){
-    if(error instanceof ValidationError){
+try {
+    validate(''); //* This will trigger a ValidationError
+    // validate(123); 
+    // validate('Aryan');
+} catch (error) {
+    if (error instanceof ValidationError) {
         console.error('Validation Error:', error.message);
+        console.error('Stack Trace:', error.stack); //* Log stack trace for debugging
+    } else {
+        //* Handle unexpected errors
+        console.error('Unexpected Error:', error.message);
+        console.error('Stack Trace:', error.stack); //* Log stack trace for unexpected errors
     }
 }
