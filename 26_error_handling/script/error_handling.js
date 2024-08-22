@@ -72,6 +72,7 @@ function validate(input){
     if(!input){
         throw new ValidationError('Input is required.');
     }
+    console.log(input);
 }
 
 try{
