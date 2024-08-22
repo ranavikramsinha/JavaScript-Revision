@@ -59,3 +59,26 @@ catch(error){
 finally{ //* finally always runs
     console.log('Finally Executed');
 }
+
+//* Error handling (extending errors)
+class ValidationError extends Error {
+    constructor(message){
+        super(message);
+        this.name = 'ValidationError';
+    }
+}
+
+function validate(input){
+    if(!input){
+        throw new ValidationError('Input is required.');
+    }
+}
+
+try{
+    validate('');
+}
+catch(error){
+    if(error instanceof ValidationError){
+        console.error('Validation Error:', error.message);
+    }
+}
